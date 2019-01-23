@@ -1,19 +1,80 @@
 h1 {
     text-align: center;
 }
+p {
+    font-size: small
+}
+body{
+    font-family: 'Times New Roman', medium, black
+}
 .me {
     float: right;
     height: 400px;
     width: 30%;
     border-radius: 50%;
+    margin-bottom: 100px;
+    margin-left: 150px;
 }
 .elon {
     height: 100;
     width: 30%;
+    text-align: center;
+    padding: 0px 200px;
 }
-#courseTable{
-    border: 3px solid black;
+.aboutMe{
+
+}
+#courseTable tr:nth-child(even){
+    background: red;
+}
+#courseTable tr:nth-child(odd){
+    background: blue;
+}
+#courseTable td:nth-child(odd) {
+    text-align: center;
 }
 #mainTable{
     
+}
+.unOrderedList{
+
+}
+.favorites{
+
+}
+.roleModel{
+
+}
+.innerTable{
+    
+}
+.inner{
+    
+}
+.links{
+
+}
+.quotes{
+
+}
+.best{
+    font-style: italic;
+}
+.role{
+
+}
+.favoriteLinks{
+
+}
+.dailyTasks{
+
+}
+.dailys{
+
+}
+.quotations{
+
+}
+.websites{
+
 }
