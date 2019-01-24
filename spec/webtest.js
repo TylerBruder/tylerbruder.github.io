@@ -1,7 +1,7 @@
 var MyCSSRules;
 
 describe('Web Page Homework', () => {
-  const MY_HTML_FILE = 'mypage.html';
+  const MY_HTML_FILE = 'myPage.html';
   var mTable;
   var page, pageStr;
   var cssURL;
@@ -235,7 +235,8 @@ describe('Web Page Homework', () => {
     const el = document.querySelector('table[id=mainTable]');
     expect(el).toExist();
     const el1 = document.querySelector('table[id=mainTable][border]');
-    expect(el1.length).toEqual(0);
+    expect(el1).toBeNull();
+    // expect(el1.length).toEqual(0);
   });
 
   it('has a mainTable with three rows', () => {
@@ -481,9 +482,12 @@ describe('Web Page Homework', () => {
   it("'courseTable' uses nth-child pseudo class to center text", () => {
     const selectors = findSelectorWithPropAndValue('text-align', 'center');
     expect(selectors.length).toBeGreaterThan(0);
-    const columns = page.querySelectorAll('#courseTable td');
-    const out = matchElementsWithStyles(columns, selectors);
-    expect(out).toBeTruthy();
+    /* some students use th and td */
+    const columnsTd = page.querySelectorAll('#courseTable td');
+    const columnsTh = page.querySelectorAll('#courseTable th');
+    const outTd = matchElementsWithStyles(columnsTd, selectors);
+    const outTh = matchElementsWithStyles(columnsTh, selectors);
+    expect(outTd || outTh).toBeTruthy();
 
     // Confirm that pseudo-element :nth-child is used
     for (let k = 0; k < selectors.length; k++) {

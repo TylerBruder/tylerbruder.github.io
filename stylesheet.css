@@ -1,5 +1,6 @@
 h1 {
     text-align: center;
+    background-color: aqua;
 }
 p {
     font-size: small
@@ -22,7 +23,7 @@ body{
     padding: 0px 200px;
 }
 .aboutMe{
-
+    
 }
 #courseTable tr:nth-child(even){
     background: red;
