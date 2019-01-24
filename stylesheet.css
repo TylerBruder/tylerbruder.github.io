@@ -25,6 +25,9 @@ body{
 .aboutMe{
     
 }
+#courseTable {
+    border: solid
+}
 #courseTable tr:nth-child(even){
     background: red;
 }
